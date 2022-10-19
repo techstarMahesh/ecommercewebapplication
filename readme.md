@@ -1,4 +1,4 @@
-# It is a E-Commerce website using Django Framework.
+# It is a E-Commerce website using Python(Django Framework).
 
 # Technology Used: 
 1. Django
@@ -7,11 +7,9 @@
 4. CSS
 5. Bootstrap
 6. Javascript
-7. Jquery
-8. Ajax
 9. MySQL
 
-# [Live projectat](http://techstarmahesh.pythonanywhere.com/)
+# [Live](http://techstarmahesh.pythonanywhere.com/)
 
 # Here are some screenshorts
 ![image](https://user-images.githubusercontent.com/46925955/196788676-68b333c7-c389-4d87-99e8-6415ee78d1ea.png)
