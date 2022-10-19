@@ -107,3 +107,10 @@ class OrderPlaced ( models.Model ) :
     @property
     def total_cost(self):
         return self.quantity * self.product.discounted_price
+
+class coustumerFeedback(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    username = models.CharField(max_length=100)
+    email = models.EmailField()
+    massage = models.TextField()

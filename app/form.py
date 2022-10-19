@@ -60,3 +60,11 @@ class CustomerProfileForm(forms.ModelForm):
             'city': forms.TextInput(attrs={'class': 'form-control'}),
             'state': forms.Select(attrs={'class': 'form-control'}),
             'zipcode': forms.NumberInput(attrs={'class': 'form-control'})}
+
+
+class coustumerFeedbackForm(forms.Form):
+    first_name = forms.CharField(error_messages={'required':'Enter your First Name'})
+    last_name = forms.CharField(error_messages={'required':'Enter your Last Name'})
+    username = forms.CharField(error_messages={'required':'Enter your Username'})
+    email = forms.EmailField(error_messages={'required':'Enter your Email'},min_length=5, max_length=20)
+    message = forms.CharField(widget=forms.Textarea,error_messages={'required':'Enter your Message'})

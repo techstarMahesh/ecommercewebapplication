@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.views import View
-from .models import Customer, Product, Cart, OrderPlaced
-from .form import CustomerRegistrationForm, MyPasswordChangeForm, CustomerProfileForm
+from .models import Customer, Product, Cart, OrderPlaced, coustumerFeedback
+from .form import CustomerRegistrationForm, MyPasswordChangeForm, CustomerProfileForm, coustumerFeedbackForm
 from django.contrib import messages
 from django.db.models import Q
 from django.http import JsonResponse
@@ -225,3 +225,21 @@ class ProfileView(View):
             reg.save()
             messages.success(request, "Congratulations!! Profile Updated Successfully")
         return render(request, 'app/profile.html',{'form':form,'active':'btn-primary'})
+
+
+
+def contects(request):
+    if request.method =='POST':
+        fm= coustumerFeedbackForm(request.POST)
+        if fm.is_valid():
+            fn = fm.cleaned_data['firstname']
+            ln = fm.cleaned_data['lastname']
+            un = fm.cleaned_data['username']
+            em = fm.cleaned_data['email']
+            ms = fm.cleaned_data['message']
+            reg = coustumerFeedback(firstname=fn,lastname=ln,username=un,email=em,message=ms)
+            reg.save()
+            messages.success(request, "Thanks for your feedback")
+    else:
+        fm = coustumerFeedbackForm()
+    return render(request, 'app/contectUs.html', {'form': fm})
