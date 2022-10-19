@@ -9,8 +9,6 @@
 6. Javascript
 9. MySQL
 
-# [Live](http://techstarmahesh.pythonanywhere.com/)
-
 # Here are some screenshorts
 ![image](https://user-images.githubusercontent.com/46925955/196788676-68b333c7-c389-4d87-99e8-6415ee78d1ea.png)
 ![image](https://user-images.githubusercontent.com/46925955/196788728-c9b4397f-de33-4259-91b1-76022a264f9e.png)
@@ -29,3 +27,13 @@
 # Contact Us
 ![image](https://user-images.githubusercontent.com/46925955/196790087-0d743fa9-1dbe-461f-88de-10184f733eee.png)
 
+# SQL
+![image](https://user-images.githubusercontent.com/46925955/196794416-a1dbbd41-da91-48ca-af20-6244f15b2521.png)
+![image](https://user-images.githubusercontent.com/46925955/196794062-df5ae70f-b4d8-4f47-b8d6-5d7e32dba4e2.png)
+![image](https://user-images.githubusercontent.com/46925955/196794236-351c2f57-c2de-4432-b28b-ebe8df9bb618.png)
+
+Django Admin Panel
+![image](https://user-images.githubusercontent.com/46925955/196794634-400fc111-7891-45b4-a706-ac5845d6ccf8.png)
+
+
+# [Live](http://techstarmahesh.pythonanywhere.com/)
