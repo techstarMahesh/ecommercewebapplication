@@ -32,7 +32,7 @@
 ![image](https://user-images.githubusercontent.com/46925955/196794062-df5ae70f-b4d8-4f47-b8d6-5d7e32dba4e2.png)
 ![image](https://user-images.githubusercontent.com/46925955/196794236-351c2f57-c2de-4432-b28b-ebe8df9bb618.png)
 
-Django Admin Panel
+# Django Admin Panel
 ![image](https://user-images.githubusercontent.com/46925955/196794634-400fc111-7891-45b4-a706-ac5845d6ccf8.png)
 
 
