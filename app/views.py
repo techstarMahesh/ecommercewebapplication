@@ -232,13 +232,15 @@ def contects(request):
     if request.method =='POST':
         fm= coustumerFeedbackForm(request.POST)
         if fm.is_valid():
-            fn = fm.cleaned_data['firstname']
-            ln = fm.cleaned_data['lastname']
-            un = fm.cleaned_data['username']
+            fn = fm.cleaned_data['first_name']
+            ln = fm.cleaned_data['last_name']
+            mn = fm.cleaned_data['mobile']
+            gn = fm.cleaned_data['gender']
             em = fm.cleaned_data['email']
             ms = fm.cleaned_data['message']
-            reg = coustumerFeedback(firstname=fn,lastname=ln,username=un,email=em,message=ms)
+            reg = coustumerFeedback(first_name=fn,last_name=ln,email=em,massage=ms,mobile=mn,gender=gn)
             reg.save()
+            fm = coustumerFeedbackForm()
             messages.success(request, "Thanks for your feedback")
     else:
         fm = coustumerFeedbackForm()

@@ -1,5 +1,6 @@
+from tkinter import Widget
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField, PasswordChangeForm, PasswordResetForm, SetPasswordForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm
 from django.contrib.auth.models import User
 from django.utils.translation import gettext, gettext_lazy as _
 from django.contrib.auth import password_validation
@@ -61,10 +62,12 @@ class CustomerProfileForm(forms.ModelForm):
             'state': forms.Select(attrs={'class': 'form-control'}),
             'zipcode': forms.NumberInput(attrs={'class': 'form-control'})}
 
+CHOICES = [('Male','Male'),('Female','Female')]
 
 class coustumerFeedbackForm(forms.Form):
-    first_name = forms.CharField(error_messages={'required':'Enter your First Name'})
-    last_name = forms.CharField(error_messages={'required':'Enter your Last Name'})
-    username = forms.CharField(error_messages={'required':'Enter your Username'})
-    email = forms.EmailField(error_messages={'required':'Enter your Email'},min_length=5, max_length=20)
-    message = forms.CharField(widget=forms.Textarea,error_messages={'required':'Enter your Message'})
+    first_name = forms.CharField(error_messages={'required':'Enter your First Name'} ,widget=forms.TextInput(attrs={'class': 'form-control'}))
+    last_name = forms.CharField(error_messages={'required':'Enter your Last Name'}  ,widget=forms.TextInput(attrs={'class': 'form-control'}))
+    mobile = forms.CharField(error_messages={'required':'Enter your Mobile Number'}  ,widget=forms.TextInput(attrs={'class': 'form-control'}))
+    gender=forms.CharField(widget=forms.RadioSelect(choices=CHOICES))
+    email = forms.EmailField(error_messages={'required':'Enter your Email'},min_length=5, max_length=100 ,widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    message = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control'}),error_messages={'required':'Enter your Message'})
